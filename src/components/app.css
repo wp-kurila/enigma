@@ -1,0 +1,12 @@
+.button {
+	background: red;
+	padding: 10px;
+
+	& span {
+		color: green;
+	}
+}
+
+.value {
+	font-size: 48px;
+}

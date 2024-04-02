@@ -1,0 +1,9 @@
+.about {
+	border: 10px solid green;
+}
+
+.icon {
+	background: url("./img/new-year.png");
+	width: 410px;
+	height: 320px;
+}
