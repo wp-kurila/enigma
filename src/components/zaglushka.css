@@ -49,6 +49,7 @@
 	line-height: 110%;
 	text-transform: uppercase;
 	margin-bottom: 76px;
+	z-index: 1;
 
 	@media (--tablet) {
 		font-size: 52px;
@@ -67,6 +68,7 @@
 	font-size: 38px;
 	line-height: 120%;
 	margin-bottom: 60px;
+	z-index: 1;
 
 	@media (--tablet) {
 		font-size: 32px;
@@ -107,6 +109,7 @@
 	text-transform: uppercase;
 	color: #c7dde7;
 	flex-basis: 143px;
+	z-index: 1;
 
 	@media (--mobile) {
 		flex-basis: auto;
@@ -131,7 +134,7 @@
 .house {
 	background-image: url("img/house.png");
 	position: absolute;
-	width: min(100%, 1592px);
+	width: min(calc(100% - 200px), 1592px);
 	aspect-ratio: 796 / 479;
 	bottom: 0;
 	right: 0;
