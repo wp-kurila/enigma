@@ -6,9 +6,14 @@ import type {IConfigOptions} 	from './types/types';
 export default function (options: IConfigOptions): ModuleOptions['rules'] {
 	const isDev = options.mode === 'development';
 
-	const assetLeader = {
+	const assetLoader = {
 		test: /\.(png|svg|jpg|jpeg|gif)$/i,
 		type: 'asset/resource'
+	}
+
+	const assetLoaderFonts = {
+		test: /\.(woff|woff2|eot|ttf|otf)$/i,
+		type: 'asset/resource',
 	}
 
 	const cssLoaderModules = {
@@ -41,5 +46,5 @@ export default function (options: IConfigOptions): ModuleOptions['rules'] {
 		},
 	}
 
-	return [assetLeader, postCssLoader, tsLoader];
+	return [assetLoader, assetLoaderFonts, postCssLoader, tsLoader];
 }

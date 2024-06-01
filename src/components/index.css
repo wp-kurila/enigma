@@ -1,0 +1,16 @@
+:root {
+	--font-family: "Lato", sans-serif;
+	--second-family: "Tenor Sans", sans-serif;
+
+	--main-text: #fff;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-family);
+	color: var(--main-text);
+}
+
+* {
+	box-sizing: border-box;
+}
