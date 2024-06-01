@@ -131,7 +131,7 @@
 .house {
 	background-image: url("img/house.png");
 	position: absolute;
-	width: 1592px;
+	width: min(100%, 1592px);
 	aspect-ratio: 796 / 479;
 	bottom: 0;
 	right: 0;
