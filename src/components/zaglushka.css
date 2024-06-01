@@ -121,6 +121,7 @@
 	white-space: pre-line;
 	color: var(--main-text);
 	text-decoration: auto;
+	z-index: 1;
 
 	@media (--mobile) {
 		font-size: 20px;
