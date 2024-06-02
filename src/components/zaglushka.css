@@ -50,6 +50,7 @@
 	text-transform: uppercase;
 	margin-bottom: 76px;
 	z-index: 1;
+	white-space: pre-line;
 
 	@media (--tablet) {
 		font-size: 52px;
@@ -69,6 +70,7 @@
 	line-height: 120%;
 	margin-bottom: 60px;
 	z-index: 1;
+	white-space: pre-line;
 
 	@media (--tablet) {
 		font-size: 32px;
@@ -78,6 +80,7 @@
 	@media (--mobile) {
 		font-size: 24px;
 		margin-bottom: 28px;
+		white-space: nowrap;
 	}
 }
 

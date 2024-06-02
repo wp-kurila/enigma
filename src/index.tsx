@@ -8,6 +8,8 @@ import {
 
 import App					from './components/App';
 
+import './components/i18n';
+
 const root = document.getElementById('root');
 
 if (!root) throw new Error('root not found');
@@ -26,5 +28,9 @@ const router = createBrowserRouter([
 ]);
 
 container.render(
-	<RouterProvider router={router} />
+	<React.StrictMode>
+		<React.Suspense fallback='Loading...'>
+			<RouterProvider router={router} />
+		</React.Suspense>
+	</React.StrictMode>
 );

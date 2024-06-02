@@ -4,7 +4,7 @@ import type {IConfigOptions} from './types/types';
 export default function (options: IConfigOptions): DevServerConfiguration {
 	return {
 		port: options.port ?? 3000,
-		open: true,
+		open: false,
 		//nginx
 		historyApiFallback: true,
 		hot: true

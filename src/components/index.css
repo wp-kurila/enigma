@@ -11,6 +11,11 @@ body {
 	color: var(--main-text);
 }
 
+button {
+	border: 0;
+	padding: 0;
+}
+
 * {
 	box-sizing: border-box;
 }
