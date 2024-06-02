@@ -80,7 +80,7 @@
 	@media (--mobile) {
 		font-size: 24px;
 		margin-bottom: 28px;
-		white-space: nowrap;
+		white-space: normal;
 	}
 }
 
