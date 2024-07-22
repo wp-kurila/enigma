@@ -20,6 +20,7 @@ export default function(options: IConfigOptions): Configuration['plugins'] {
 		new CopyPlugin({
 			patterns: [
 			  {from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales')},
+			  {from: 'static', to: 'static'}
 			],
 		  }),
 	].filter(Boolean)	
