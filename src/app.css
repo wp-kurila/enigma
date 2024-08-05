@@ -3,6 +3,7 @@
 .app {
 	padding: 0 96px;
 	margin: 0 auto;
+	background: #fff;
 
 	@media (--tablet) {
 		padding: 0 78px;
