@@ -106,7 +106,7 @@ body:has(.popup) {
 }
 
 .main_image {
-	background: center / cover no-repeat;
+	background: center / contain no-repeat;
 	width: 100%;
 	height: 100%;
 }

@@ -30,7 +30,7 @@ const FadeInWithScroll: React.FC<Props> = (props: Props): React.ReactElement => 
 	}, []);
 
 	return (
-		<div ref={ref} style={{opacity: 0, transform: 'translateY(40px)'}}>
+		<div ref={ref} style={{opacity: 0, transform: `translateY(${isMobile ? 80 : 40}px)`}}>
 			{props.children}
 		</div>
 	)
