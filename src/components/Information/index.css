@@ -1,0 +1,177 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.information {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 148px;
+
+	@media (--tablet) {
+		margin-bottom: 64px;
+	}
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 120%;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+
+	@media (--tablet) {
+		font-size: 48px;
+		margin-bottom: 12px;
+	}
+
+	@media (--mobile) {
+		font-size: 36px;
+	}
+}
+
+.text {
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 140%;
+	white-space: pre-line;
+	margin-bottom: 32px;
+
+	@media (--tablet) {
+		font-size: 18px;
+		margin-bottom: 24px;
+	}
+}
+
+.link {
+	@media (--tablet) {
+		margin-bottom: 24px;
+	}
+}
+
+.content {
+	display: flex;
+	gap: 40px;
+	width: 100%;
+
+	@media (--tablet) {
+		flex-flow: column;
+	}
+
+	@media (--mobile) {
+		gap: 32px;
+	}
+}
+
+.content__block {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: calc(100% / 3 - 40px * 2 / 3);
+
+	&:nth-child(even) {
+		transform: translate(0, 40px);
+	}
+
+	@media (--tablet) {
+		flex-flow: row;
+		width: 100%;
+
+		&:nth-child(even) {
+			transform: translate(0, 0);
+			flex-flow: row-reverse;
+
+			& .text_wrapper {
+				flex-flow: row-reverse;
+				margin-left: 0;
+				margin-right: -24px;
+			}
+		}
+	}
+
+	@media (--mobile) {
+		&:nth-child(n) {
+			flex-flow: column;
+
+			& .text_wrapper {
+				flex-flow: column;
+				margin-left: 0;
+				margin-top: -24px;
+			}
+		}
+	}
+}
+
+.image_wrapper {
+	width: 100%;
+	aspect-ratio: 276 / 175;
+
+	@media (--mobile) {
+		aspect-ratio: 336 / 212;
+	}
+}
+
+.text_wrapper {
+	margin-top: -30px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	z-index: 1;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 60px;
+		width: 2px;
+		background: #001e49;
+	}
+
+	@media (--tablet) {
+		margin-top: 0;
+		flex-flow: row;
+		gap: 12px;
+		margin-left: -24px;
+
+		&::before {
+			width: 48px;
+			height: 2px;
+		}
+	}
+
+	@media (--mobile) {
+		flex-flow: column;
+		margin-left: 0;
+		margin-top: -24px;
+
+		&::before {
+			height: 48px;
+			width: 2px;
+		}
+	}
+}
+
+.content__block__title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 24px;
+	align-items: center;
+
+	@media (--mobile) {
+		font-size: 48px;
+	}
+}
+
+.description {
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 160%;
+
+	@media (--mobile) {
+		font-size: 18px;
+	}
+}

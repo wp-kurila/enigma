@@ -1,0 +1,21 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.footer {
+	padding: 32px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media (--tablet) {
+		flex-flow: column-reverse;
+		padding: 24px 0 104px;
+		gap: 24px;
+	}
+
+	@media (--mobile) {
+		flex-flow: column-reverse;
+		padding: 24px 0;
+		gap: 24px;
+	}
+}

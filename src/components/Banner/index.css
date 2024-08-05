@@ -1,0 +1,51 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.wrapper {
+	background: radial-gradient(158.55% 50.53% at 49.47% 50.05%, rgb(25, 34, 62) 0%, rgb(19, 24, 47) 100%);
+	position: relative;
+	margin-bottom: 96px;
+	padding-top: 96px;
+
+	@media (--tablet) {
+		margin-bottom: 48px;
+		padding-top: 62px;
+	}
+
+	@media (--mobile) {
+		margin-bottom: 20px;
+		padding-top: 54px;
+	}
+}
+
+.banner {
+	background: url('../../../static/images/components/banner.png') 100% / cover no-repeat;
+	width: 100%;
+    aspect-ratio: 1728 / 860;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	mix-blend-mode: multiply;
+
+	@media (--tablet) {
+		aspect-ratio: 153 / 118;
+	}
+
+	@media (--mobile) {
+		aspect-ratio: 336 /587;
+		background-size: contain;
+		background-image: url('../../../static/images/components/banner-mobile.png')
+	}
+}
+
+.logo {
+	background: url('../../../static/images/components/logo-banner.svg') 100% / cover no-repeat;
+	width: 389px;
+	aspect-ratio: 389 / 337;
+	position: absolute;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 9;
+
+	@media (--tablet) {
+		width: 203px;
+	}
+}

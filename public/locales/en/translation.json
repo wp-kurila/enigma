@@ -1,7 +1,68 @@
 {
-	"temporaryTitle": "Website Under\nDevelopment",
-	"temporaryText": "You can contact our\nmanagers or visit our office in person",
-	"email": "Email",
-	"address": "Office Address",
-	"tel": "Phone"
+	"nav__about": "About us",
+	"nav__layouts": "Layouts",
+	"nav__contacts": "Contacts",
+
+	"btn__contact__manager": "contact the manager",
+
+	"about__title": "About us",
+	"about__text": "Enigma Residence is a unique residential complex where comfort and quality, combined with cutting-edge technology, become a reality.",
+
+	"information__text": "The residential complex is located on the tropical island of Phuket\njust 600 meters from the Rawai waterfront.",
+	"information__link": "Presentation of the Complex",
+	"information__data": ["buildings", "layouts", "apartments"],
+
+	"location__title": "Location",
+	"location__text": "Location on an elevated area makes the Enigma complex one of the highest in the area, offering breathtaking views of Rawai and Chalong bays on one side and the green hills and surroundings of Nai Harn beach on the other.",
+	"location__text2": "In addition to the excellent location, we offer a variety of amenities for your comfort.",
+	"location__btn": "View on map",
+
+	"convenience__title": "Facilities",
+	"convenience__descriptions": ["Rooftop pool with sea view", "Spacious coworking space", "Sauna", "Two gyms", "Underground parking", "Shuttle bus to the beaches", "Lounge area with panoramic view", "Electric vehicle charging stations", "Underground parking under each building", "Lobby", "CCTV", "Security"],
+
+	"interior__title": "Interior",
+
+	"room__layouts__title": "Layouts",
+	"room__layouts__content": {
+		"living-room": "living-room",
+		"kitchen": "kitchen",
+		"bedroom": "bedroom",
+		"bedroom1": "bedroom1",
+		"bedroom2": "bedroom2",
+		"bathroom": "bathroom",
+		"bathroom1": "bathroom1",
+		"bathroom2": "bathroom2",
+		"terrace": "terrace",
+		"dressing-room": "dressing-room",
+		"total": "total"
+	},
+
+	"faq__title": "Answers to questions",
+	"faq__content": [
+		{"title": "Online Purchase", "text": "It is possible to complete the transaction without being physically present in the country. Viewing the property and consultation are available with a manager via video or audio call, as well as through messengers."},
+		{"title": "Payment Methods", "text": "Payment methods:\n- Non-cash payment\n- Cash payment in baht\n- Interest-free installments during construction."},
+		{"title": "Forms of Ownership", "text": "The Enigma Residence complex offers the following forms of ownership:\n1. Foreign Freehold – full ownership by a foreign individual or legal entity.\n2. Leasehold – long-term lease with renewal every 30 years.\n3. Thai Freehold – full ownership for Thai individuals or legal entities."}
+	],
+
+	"inputs__title": "Request for Consultation",
+	"inputs__text": "Leave your contact information, and our manager will get in touch with you within the business day.",
+	"inputs__input__name": "Name",
+	"inputs__input__tel": "Phone number",
+	"inputs__input__email": "E-mail",
+	"inputs__input__messenger": "Messenger",
+	"inputs__input__comment": "Comment",
+	"inputs__btns__text": "By clicking the button, you consent to the processing of personal data and agree to the privacy policy",
+	"inputs__btns__btn": "Send",
+
+	"contacts__title": "Contacts",
+	"contacts__content": [
+		{"title": "Office Address:", "description": "5/66AB Moo 5, Wiset Road, Rawai Subdistrict, Mueang district, Phuket, 83130", "href": "https://maps.app.goo.gl/EdbVqeH2to7bXVqw6"},
+		{"title": "Phone:", "description": "+66 62 905 2181", "href": "tel:+66629052181"},
+		{"title": "E-mail:", "description": "info@enigma-residence.com", "href": "mailto:info@enigma-residence.com"},
+		{"title": "Business Hours:", "description": "from 10:00 AM to 6:00 PM local time"}
+	],
+
+	"map__btn": "Open on Google Maps",
+
+	"copyright__content": ["© 2024 Enigma Residence", "Privacy Policy", "Designed by: Krispy-Studio"]
 }

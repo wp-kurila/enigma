@@ -1,0 +1,23 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.copyright {
+	display: flex;
+	gap: 24px;
+
+	@media (--mobile) {
+		flex-flow: column;
+		gap: 12px;
+		align-items: center;
+	}
+}
+
+.copyright__elem {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 140%;
+
+	@media (--tablet) {
+		font-size: 14px;
+	}
+}

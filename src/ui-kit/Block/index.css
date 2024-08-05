@@ -1,0 +1,35 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.block {
+	display: flex;
+	gap: 96px;
+	align-items: center;
+	margin-bottom: 124px;
+
+	@media (--tablet) {
+		flex-flow: column;
+		gap: 22px;
+		margin-bottom: 68px;
+	}
+
+	@media (--mobile) {
+		gap: 24px;
+	}
+}
+
+.image_wrapper {
+	width: 45%;
+	flex: 0 0 auto;
+	aspect-ratio: 422 / 293;
+
+	@media (--tablet) {
+		width: 100%;
+		width: 100%;
+		aspect-ratio: 612 / 399;
+	}
+
+	@media (--mobile) {
+		aspect-ratio: 336 / 399;
+	}
+}

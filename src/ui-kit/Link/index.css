@@ -1,0 +1,49 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.link {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 130%;
+	text-transform: uppercase;
+	display: flex;
+    align-items: center;
+    gap: 12px;
+
+	&::after {
+		content: '';
+		display: block;
+		mask: url('../../../static/images/ui-kit/arrow.svg') 100% / cover;
+		background: #000;
+		width: 43px;
+		aspect-ratio: 43 / 17;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			color: #fdd273;
+
+			&::after {
+				background: #fdd273
+			}
+		}
+	}
+
+	&:active {
+		color: #ffe19d;
+
+		&::after {
+			background: #ffe19d
+		}
+	}
+
+	@media (--tablet) {
+		font-size: 16px;
+		gap: 8px;
+
+		&::after {
+			width: 27px;
+			aspect-ratio: 27 / 16;
+		}
+	}
+}

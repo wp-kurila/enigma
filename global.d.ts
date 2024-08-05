@@ -5,3 +5,5 @@ declare module '*.css' {
 	const classNames: IClassNames;
 	export = classNames;
 }
+
+declare const __IS_DEV__: boolean;

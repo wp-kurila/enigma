@@ -1,0 +1,60 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.field {
+	position: relative;
+	cursor: pointer;
+}
+
+.label {
+	position: absolute;
+	left: 20px;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 120%;
+	color: rgba(0, 0, 0, 0.6);
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.1s ease;
+
+	&.label_active {
+		font-size: 16px;
+		top: 0;
+		padding: 0 4px;
+		background: #fff;
+	}
+
+
+	@media (--tablet) {
+		font-size: 18px;
+	}
+
+	@media (--tablet) {
+		left: 8px;
+	}
+}
+
+.input {
+	outline: 0;
+	border: 0;
+	height: 77px;
+	border-bottom: 1px solid #000;
+	width: 100%;
+	padding-left: 20px;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 120%;
+
+	&.input_active {
+		border: 1px solid #000;
+	}
+
+	@media (--tablet) {
+		font-size: 18px;
+		height: 46px;
+	}
+
+	@media (--mobile) {
+		padding-left: 8px;
+	}
+}

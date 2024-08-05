@@ -1,0 +1,36 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.social {
+	display: flex;
+	gap: 24px;
+
+	@media (--tablet) {
+		gap: 18px;
+	}
+}
+
+.social__elem {
+	width: 42px;
+	aspect-ratio: 1;
+	mask: 100% / cover;
+	background: black;
+
+	@media (hover: hover) {
+		&:hover {
+			background: #FDD273;
+		}
+	}
+
+	&:active {
+		background: #FFE19D;
+	}
+
+	@media (--tablet) {
+		width: 32px;
+	}
+
+	@media (--mobile) {
+		width: 36px;
+	}
+}

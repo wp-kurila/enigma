@@ -19,9 +19,12 @@ export default function(options: IConfigOptions): Configuration['plugins'] {
 		}),
 		new CopyPlugin({
 			patterns: [
-			  {from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales')},
-			  {from: 'static', to: 'static'}
+				{ from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales') },
+				{ from: 'static', to: 'static' }
 			],
-		  }),
+		}),
+		new webpack.DefinePlugin({
+			__IS_DEV__: JSON.stringify(isDev)
+		})
 	].filter(Boolean)	
 }

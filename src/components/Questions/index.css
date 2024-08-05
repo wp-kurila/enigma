@@ -1,0 +1,27 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.questions {
+	max-width: 1145px;
+	margin-bottom: 124px;
+	margin: 0 auto 92px;
+
+	@media (--tablet) {
+		margin-bottom: 50px;
+	}
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 46px;
+	line-height: 120%;
+	text-align: center;
+	margin-bottom: 16px;
+
+	@media (--tablet) {
+		font-size: 32px;
+		line-height: 110%;
+		margin-bottom: 6px;
+	}
+}

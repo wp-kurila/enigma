@@ -1,0 +1,43 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.location {
+	display: flex;
+    flex-flow: column;
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 120%;
+	margin-bottom: 24px;
+
+	@media (--tablet) {
+		font-size: 32px;
+		line-height: 110%;
+		margin-bottom: 12px;
+	}
+}
+
+.text {
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 140%;
+	margin-bottom: 32px;
+
+	@media (--tablet) {
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+
+	@media (--mobile) {
+		margin-bottom: 24px;
+	}
+}
+
+.link {
+	@media (--tablet) {
+		align-self: end;
+	}
+}

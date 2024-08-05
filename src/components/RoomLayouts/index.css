@@ -1,0 +1,169 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.roomsLayout_wrapper {
+	margin: 0 -96px 124px;
+	padding: 96px 0;
+	background: #f8f8f8;
+
+	@media (--tablet) {
+		padding: 64px 0;
+		margin: 0 -78px 64px;
+	}
+
+	@media (--mobile) {
+		margin: 0 -18px 64px;
+	}
+}
+
+.roomsLayout {
+	width: auto;
+	margin-left: clamp(33%, 526px, 28%);
+
+	@media (--tablet) {
+		width: auto;
+		margin-left: 328px;
+	}
+
+	@media (--tablet) {
+		width: auto;
+		margin-left: 20px;
+	}
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 46px;
+	line-height: 120%;
+	margin-bottom: 32px;
+
+	@media (--tablet) {
+		font-size: 32px;
+		line-height: 110%;
+		margin-bottom: 18px;
+	}
+}
+
+.layouts__titles {
+	display: flex;
+	gap: 48px;
+	margin-bottom: 48px;
+
+	@media (--tablet) {
+		gap: 24px;
+		margin-bottom: 28px;
+	}
+}
+
+.layouts__title {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 160%;
+	text-align: center;
+	color: #272928;
+	cursor: pointer;
+	opacity: .5;
+
+	@media (hover: hover) {
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	@media (--tablet) {
+		font-size: 20px;
+	}
+}
+
+.layouts__title_active {
+	opacity: 1;
+}
+
+.layouts_block {
+	overflow: hidden;
+	scroll-behavior: smooth;
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.layouts_wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 40px;
+	padding-right: 96px;
+	position: relative;
+	width: fit-content;
+
+	@media (--tablet) {
+		gap: 12px;
+		padding-right: 78px;
+	}
+
+	@media (--mobile) {
+		gap: 12px;
+		padding-right: 18px;
+	}
+}
+
+.layout {
+	min-width: 404px;
+	height: 478px;
+	background: #fff;
+	color: #000;
+	opacity: 0.5;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-flow: column;
+	gap: 12px;
+	cursor: pointer;
+
+	@media (hover: hover) {
+		&:hover {
+			opacity: 1;
+			background: #001e49;
+			color: #fff;
+		}
+	}
+
+	@media (--tablet) {
+		min-width: 196px;
+		height: 232px;
+	}
+}
+
+.layout_active {
+	opacity: 1;
+}
+
+.layout__title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 56px;
+	line-height: 100%;
+	letter-spacing: -0.02em;
+
+	@media (--tablet) {
+		font-size: 32px;
+	}
+}
+
+.layout__description {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 160%;
+	text-align: center;
+	color: #a7a7a7;
+	text-transform: capitalize;
+
+	@media (--tablet) {
+		font-size: 18px;
+	}
+}

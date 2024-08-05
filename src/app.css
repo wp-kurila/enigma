@@ -1,0 +1,14 @@
+@import 'consts';
+
+.app {
+	padding: 0 96px;
+	margin: 0 auto;
+
+	@media (--tablet) {
+		padding: 0 78px;
+	}
+
+	@media (--mobile) {
+		padding: 0 18px;
+	}
+}

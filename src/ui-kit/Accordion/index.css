@@ -1,0 +1,78 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.accordion {
+	padding: 32px 0;
+	cursor: pointer;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid #c2c6d4;
+	}
+
+	@media (--tablet) {
+		padding: 18px 0;
+	}
+}
+
+.accordion_active {
+	cursor: inherit;
+
+	& .arrow {
+		background: url("../../../static/images/ui-kit/cross.svg") 100% / cover no-repeat;
+		cursor: pointer;
+		background-size: auto;
+		background-position-x: center;
+	}
+
+	& .accordion__add_block {
+		grid-template-rows: 1fr;
+	}
+}
+
+.accordion__main_block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.accordion__add_block {
+	margin-top: 12px;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 140%;
+	max-width: 800px;
+	white-space: pre-line;
+	transition: grid-template-rows .6s ease;
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+
+	& > div {
+		min-height: 0;
+	}
+
+	@media (--tablet) {
+		font-size: 18px;
+	}
+}
+
+.title {
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 120%;
+
+	@media (--tablet) {
+		font-size: 20px;
+	}
+}
+
+.arrow {
+	background: url("../../../static/images/ui-kit/arrow-down.svg") 100% / cover no-repeat;
+	width: 32px;
+	aspect-ratio: 1;
+	cursor: pointer;
+
+	@media (--tablet) {
+		width: 24px;
+	}
+}

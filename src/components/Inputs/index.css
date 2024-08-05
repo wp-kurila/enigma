@@ -1,0 +1,93 @@
+@custom-media --tablet (width <= 1152px);
+@custom-media --mobile (width <= 767px);
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 46px;
+	line-height: 120%;
+	margin-bottom: 32px;
+
+	@media (--tablet) {
+		font-size: 32px;
+		line-height: 110%;
+		margin-bottom: 12px;
+		text-align: center;
+	}
+}
+
+.text {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 120%;
+	margin-bottom: 24px;
+
+	@media (--tablet) {
+		font-size: 16px;
+		text-align: center;
+	}
+}
+
+.inputs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin-bottom: 36px;
+
+	@media (--tablet) {
+		gap: 24px 12px;
+		margin-bottom: 32px;
+	}
+
+	@media (--mobile) {
+		margin-bottom: 24px;
+	}
+}
+
+.input {
+	flex: 1 0 calc(50% - 24px / 2);
+
+	@media (--mobile) {
+		flex: 1 0 100%;
+	}
+}
+
+.btns {
+	display: flex;
+	justify-content: space-between;
+
+	@media (--mobile) {
+		flex-flow: column;
+		gap: 24px;
+	}
+}
+
+.btns__text {
+	text-wrap: balance;
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 140%;
+	color: rgba(0, 0, 0, 0.6);
+
+	@media (--tablet) {
+		font-size: 14px;
+	}
+}
+
+.btns__btn {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 120%;
+	padding: 18px 24px;
+
+	@media (--tablet) {
+		font-size: 16px;
+		padding: 12px 24px;
+	}
+
+	@media (--mobile) {
+		width: fit-content;
+		margin: auto;
+	}
+}

@@ -1,4 +1,4 @@
-import React, {Suspense} 	from 'react';
+import React 				from 'react';
 import {createRoot} 		from 'react-dom/client';
 import {
 	createBrowserRouter,
@@ -6,9 +6,10 @@ import {
 	Navigate
 } 							from 'react-router-dom';
 
-import App					from './components/App';
+import App					from './App';
 
-import './components/i18n';
+import './i18n';
+import './index.css';
 
 const root = document.getElementById('root');
 
