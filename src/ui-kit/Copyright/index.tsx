@@ -1,25 +1,20 @@
 import React 			from 'react';
 import {useTranslation} from 'react-i18next';
-import {useIsMobile} 	from '../../utils/useIsMobile';
-import {getKrispyLink} 	from '../../helpers';
 import styles 			from './index.css';
 
 const Copyright: React.FC = (): React.ReactElement => {
-	const {t, i18n} = useTranslation();
-	const isMobile = useIsMobile();
+	const {t} = useTranslation();
 
 	const content: string[] = t('copyright__content', {returnObjects: true});
-
-	const link = getKrispyLink(i18n.language, isMobile);
 
 	return (
 		<div className={styles.copyright}>
 			{content.map((item, i) => {
 				return (
 					i === content.length - 1 ? (
-						<a key={`copyright_${i}`} target='_blank' href={link}>{item}</a>
+						<a className={styles.copyright__elem} key={`copyright_${i}`} target='_blank' href='https://krispy-studio.design/'>{item}</a>
 					) : (
-						<div key={`copyright_${i}`}>{item}</div>
+						<div className={styles.copyright__elem} key={`copyright_${i}`}>{item}</div>
 					)
 					
 				)

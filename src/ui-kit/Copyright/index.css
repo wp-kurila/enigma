@@ -21,3 +21,17 @@
 		font-size: 14px;
 	}
 }
+
+a.copyright__elem {
+	transition: all 0.3s ease;
+
+	@media (hover: hover) {
+		&:hover {
+			color: #fdd273;
+		}
+	}
+
+	&:active {
+		color: #ffe19d;
+	}
+}

@@ -15,6 +15,7 @@
 	aspect-ratio: 1;
 	mask: 100% / cover;
 	background: black;
+	transition: all .3s ease;
 
 	@media (hover: hover) {
 		&:hover {

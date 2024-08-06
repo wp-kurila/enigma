@@ -13,7 +13,9 @@ const Block: React.FC<Props> = ({children, image}: Props): React.ReactElement =>
 	return (
 		<div className={styles.block}>
 			<ImageWrapper className={styles.image_wrapper}><div className={styles.image} style={{backgroundImage: `url(${image})`}}/></ImageWrapper>
-			{children}
+			<div className={styles.text_block}>
+				{children}
+			</div>
 		</div>
 	)
 }

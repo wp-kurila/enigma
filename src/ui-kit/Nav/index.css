@@ -21,6 +21,7 @@
 	line-height: 120%;
 	cursor: pointer;
 	text-wrap: nowrap;
+	transition: all 0.3s ease;
 
 	@media (hover: hover) {
 		&:hover {

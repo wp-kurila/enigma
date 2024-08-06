@@ -1,22 +1,24 @@
-import React 				from 'react';
-import {useTranslation} 	from 'react-i18next';
-import ImageWrapper 		from '../../ui-kit/ImageWrapper';
-import Link 				from '../../ui-kit/Link';
-import {HOUSE_DESCRIPTION} 	from '../../consts';
+import React 					from 'react';
+import {useTranslation} 		from 'react-i18next';
+import ImageWrapper 			from '../../ui-kit/ImageWrapper';
+import Link 					from '../../ui-kit/Link';
+import {HOUSE_DESCRIPTION} 		from '../../consts';
+import {getPresentationLink} 	from '../../helpers';
 
-import styles 				from './index.css';
+import styles 					from './index.css';
 
 const Information: React.FC = (): React.ReactElement => {
 
-	const {t} = useTranslation();
+	const {t, i18n} = useTranslation();
 
 	const descriptions: string[] = t('information__data', {returnObjects: true});
+	const link = getPresentationLink(i18n.language as "ru" | "en");
 
 	return (
 		<div className={styles.information}>
 			<div className={styles.title}>Enigma Residence</div>
 			<div className={styles.text}>{t('information__text')}</div>
-			<Link href='/' className={styles.link}>{t('information__link')}</Link>
+			<Link href={link} className={styles.link}>{t('information__link')}</Link>
 			<div className={styles.content}>
 				{HOUSE_DESCRIPTION.map(({title, image}, i) => {
 					return (

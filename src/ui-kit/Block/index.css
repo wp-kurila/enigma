@@ -33,3 +33,11 @@
 		aspect-ratio: 336 / 399;
 	}
 }
+
+.text_block {
+	max-width: 800px;
+
+	@media (--tablet) {
+		max-width: 100%;
+	}
+}

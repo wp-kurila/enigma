@@ -468,15 +468,13 @@ export const FAQ = [
 	{title: 'Формы собственности', text: 'В комплексе Enigma Residence доступны следующие формы собственности:\n1. Foreign Freehold – полная собственность на иностранное физическое или юридическое лицо.\n2. Leasehold – долгосрочная аренда с пролонгацией каждые 30 лет.\n3. Thai Freehold – полная собственность для физических или юридических лиц Таиланда.'}
 ];
 
-export const krispy = {
-	'mob_ru': 'https://drive.google.com/file/d/18hu4eOhxPCO21mSfCS4M7bydMN01t-VM/view?usp=sharing',
-	'mob_en': 'https://drive.google.com/file/d/16qx9c7PGDZyII558nPx-y_IJyplsdL8D/view?usp=sharing',
-	'web_ru': 'https://drive.google.com/file/d/1u5XBGHYq-NVtFZ4RG0qdNxAYQ0EkKadH/view?usp=sharing',
-	'web_en': 'https://drive.google.com/file/d/1OGpa18hnPMMqLT9yfcHPkwLns94HGILn/view?usp=drive_link',
-}
-
-export const socials = [
+export const SOCIALS = [
 	{name: 'instagram', link: 'https://www.instagram.com/enigma_residence_phuket?igsh=MWlmeHJmdnAxZzBuNg=='},
 	// {name: 'telegram', link: 'https://t.me/+66629051767'},
 	{name: 'whatsapp', link: 'https://wa.me/+66629052181'},
 ];
+
+export const PRESENTATION_LINKS = {
+	ru: 'https://drive.google.com/file/d/1Zp41WVeYDrcD4ziIpmzDBaDM8X2D8LI_/view?usp=sharing',
+	en: 'https://drive.google.com/file/d/1ujSfbxUeZzsg-zVVJuMox63TUPGAmDCh/view?usp=sharing'
+}
