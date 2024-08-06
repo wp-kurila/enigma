@@ -3,7 +3,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 0,
 		title: 'studio',
 		total: 35.00,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -35,7 +35,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 1,
 		title: '1 br a',
 		total: 36.75,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -67,7 +67,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 1,
 		title: '1 br c',
 		total: 45.50,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -99,7 +99,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 1,
 		title: '1 br d',
 		total: 54.60,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -131,7 +131,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 1,
 		title: '1 br e',
 		total: 58.80,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -163,7 +163,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 1,
 		title: '1 br g',
 		total: 71.75,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -199,7 +199,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 2,
 		title: '2 br b',
 		total: 73.50,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11', 'photo_12'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -239,7 +239,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 2,
 		title: '2 br c',
 		total: 73.47,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11', 'photo_12'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -279,7 +279,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 2,
 		title: '2 br d',
 		total: 76.89,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -319,7 +319,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 2,
 		title: '2 br e',
 		total: 96.67,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11', 'photo_12', 'photo_13'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -363,7 +363,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 2,
 		title: '2 br f',
 		total: 63.74,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10'],
 		sizes: [
 			{
 				name: 'living-room',
@@ -403,7 +403,7 @@ export const ROOM_LAYOUTS = [
 		layoutId: 2,
 		title: '2 br g',
 		total: 125.00,
-		images: ['photo_1'],
+		images: ['photo_1', 'photo_2', 'photo_3', 'photo_4', 'photo_5', 'photo_6', 'photo_7', 'photo_8', 'photo_9', 'photo_10', 'photo_11', 'photo_12'],
 		sizes: [
 			{
 				name: 'living-room',

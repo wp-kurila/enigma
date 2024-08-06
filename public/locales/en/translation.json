@@ -24,17 +24,17 @@
 
 	"room__layouts__title": "Layouts",
 	"room__layouts__content": {
-		"living-room": "living-room",
-		"kitchen": "kitchen",
-		"bedroom": "bedroom",
-		"bedroom1": "bedroom1",
-		"bedroom2": "bedroom2",
-		"bathroom": "bathroom",
-		"bathroom1": "bathroom1",
-		"bathroom2": "bathroom2",
-		"terrace": "terrace",
-		"dressing-room": "dressing-room",
-		"total": "total"
+		"living-room": "Living-room",
+		"kitchen": "Kitchen",
+		"bedroom": "Bedroom",
+		"bedroom1": "Bedroom1",
+		"bedroom2": "Bedroom2",
+		"bathroom": "Bathroom",
+		"bathroom1": "Bathroom1",
+		"bathroom2": "Bathroom2",
+		"terrace": "Terrace",
+		"dressing-room": "Dressing-room",
+		"total": "Total"
 	},
 
 	"faq__title": "Answers to questions",

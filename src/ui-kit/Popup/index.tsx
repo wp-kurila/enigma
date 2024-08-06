@@ -1,7 +1,8 @@
-import React, {useState} 	from 'react';
+import React, {useState, useRef, useEffect} 	from 'react';
 import Portal 				from '../Portal';
 import {getImageLink} 		from '../../helpers';
 import {useTranslation} 	from 'react-i18next';
+import cn 					from 'classnames';
 
 import styles 				from './index.css';
 
@@ -17,12 +18,35 @@ const Popup: React.FC<Props> = (props: Props): React.ReactElement => {
 	const {closeHandler, title, sizes, images} = props;
 	const [activeImage, setActiveImage] = useState(0);
 	const {t} = useTranslation();
+	const imagesRef = useRef([]);
+	const imagesWrapper = useRef(null);
+	const imagesInner = useRef(null);
+
 	const clickOutside = (e) => {
 		const target = e.target;
 
 		if (!target.closest('[data-tag]')) {
 			closeHandler();
 		}
+	}
+
+	const handleActiveImage = (event) => {
+		const target = event.target;
+		const image = target.closest('[data-tag]');
+		
+		if (image.dataset.tag !== 'image') return;
+
+		const index = imagesRef.current.indexOf(image);
+		index !== activeImage && setActiveImage(index);
+	}
+
+	const handleScroll = (toBot?: boolean) => {
+		imagesWrapper.current.scrollBy({
+			top: (toBot ? 1 : -1) * 116,
+			behavior: "smooth"
+		});
+
+		setActiveImage(activeImage + (toBot ? 1 : -1));
 	}
 
 	const imagesFolder = title.replace(/ /g, '-');
@@ -35,6 +59,25 @@ const Popup: React.FC<Props> = (props: Props): React.ReactElement => {
 					<div className={styles.container} data-tag='popup'>
 						<button className={styles.close_btn} onClick={closeHandler}/>
 						<div className={styles.popup_content}>
+							<div className={styles.images_list_block}>
+								<button onClick={() => handleScroll()} className={styles.arrow_wrapper} disabled={activeImage === 0}><div className={cn(styles.arrow, styles.arrow_top)}/></button>
+								<div className={styles.images_list_wrapper} ref={imagesWrapper}>
+									<div className={styles.images_list} onMouseMove={handleActiveImage} ref={imagesInner}>
+										{images.map((item, i) => {
+											return (
+												<div
+													ref={el => imagesRef.current[i] = el}
+													className={cn(styles.images_list__image, {[styles.images_list__image_active]: activeImage === i})}
+													key={`popup_images_${i}`}
+													data-tag='image'
+													style={{backgroundImage: `url(${getImageLink(item, '.png', imagesFolder)})`}}
+												/>
+											)
+										})}
+									</div>
+								</div>
+								<button onClick={() => handleScroll(true)} className={styles.arrow_wrapper} disabled={activeImage === imagesRef.current.length - 1}><div className={styles.arrow}/></button>
+							</div>
 							<div className={styles.main_image_wrapper}>
 								<div className={styles.main_image} style={{backgroundImage: `url(${getImageLink(images[activeImage], '.png', imagesFolder)})`}}/>
 							</div>
