@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} 	from 'react';
+import React, {useState, useRef, useLayoutEffect} 	from 'react';
 import Portal 				from '../Portal';
 import {getImageLink} 		from '../../helpers';
 import {useTranslation} 	from 'react-i18next';
@@ -21,6 +21,15 @@ const Popup: React.FC<Props> = (props: Props): React.ReactElement => {
 	const imagesRef = useRef([]);
 	const imagesWrapper = useRef(null);
 	const imagesInner = useRef(null);
+	const rootRef = useRef(null);
+
+	useLayoutEffect(() => {
+		const zoom = document.documentElement.offsetWidth / 1920;
+
+		if (zoom > 1) {
+			rootRef.current.style.zoom = zoom;
+		}
+	}, []);
 
 	const clickOutside = (e) => {
 		const target = e.target;
@@ -54,7 +63,7 @@ const Popup: React.FC<Props> = (props: Props): React.ReactElement => {
 
 	return (
 		<Portal>
-			<div className={styles.popup} onClick={clickOutside}>
+			<div className={styles.popup} onClick={clickOutside} ref={rootRef}>
 				<div className={styles.content}>
 					<div className={styles.container} data-tag='popup'>
 						<button className={styles.close_btn} onClick={closeHandler}/>

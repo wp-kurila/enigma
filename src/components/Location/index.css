@@ -38,6 +38,6 @@
 
 .link {
 	@media (--tablet) {
-		align-self: end;
+		align-self: center;
 	}
 }
