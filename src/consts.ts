@@ -470,7 +470,7 @@ export const FAQ = [
 
 export const SOCIALS = [
 	{name: 'instagram', link: 'https://www.instagram.com/enigma_residence_phuket?igsh=MWlmeHJmdnAxZzBuNg=='},
-	// {name: 'telegram', link: 'https://t.me/+66629051767'},
+	{name: 'telegram', link: 'https://t.me/Robert_Enigma'},
 	{name: 'whatsapp', link: 'https://wa.me/+66629052181'},
 ];
 
