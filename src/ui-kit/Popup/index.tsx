@@ -70,7 +70,7 @@ const Popup: React.FC<Props> = (props: Props): React.ReactElement => {
 													className={cn(styles.images_list__image, {[styles.images_list__image_active]: activeImage === i})}
 													key={`popup_images_${i}`}
 													data-tag='image'
-													style={{backgroundImage: `url(${getImageLink(item, '.png', imagesFolder)})`}}
+													style={{backgroundImage: `url(${getImageLink(item, '.jpg', imagesFolder)})`}}
 												/>
 											)
 										})}
@@ -79,7 +79,7 @@ const Popup: React.FC<Props> = (props: Props): React.ReactElement => {
 								<button onClick={() => handleScroll(true)} className={styles.arrow_wrapper} disabled={activeImage === imagesRef.current.length - 1}><div className={styles.arrow}/></button>
 							</div>
 							<div className={styles.main_image_wrapper}>
-								<div className={styles.main_image} style={{backgroundImage: `url(${getImageLink(images[activeImage], '.png', imagesFolder)})`}}/>
+								<div className={styles.main_image} style={{backgroundImage: `url(${getImageLink(images[activeImage], '.jpg', imagesFolder)})`}}/>
 							</div>
 							<div className={styles.right_content}>
 								<div className={styles.title}>{title}</div>
