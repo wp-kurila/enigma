@@ -30,9 +30,7 @@
 	}
 
 	@media (--mobile) {
-		aspect-ratio: 336 /587;
-		background-size: contain;
-		background-image: url('../../../static/images/components/banner-mobile.png')
+		aspect-ratio: 1;
 	}
 }
 
@@ -47,5 +45,10 @@
 
 	@media (--tablet) {
 		width: 203px;
+	}
+
+	@media (--mobile) {
+		aspect-ratio: 169 / 145;
+		width: 45%;
 	}
 }

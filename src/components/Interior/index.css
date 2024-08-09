@@ -41,9 +41,11 @@
 .image {
 	background: url('../../../static/images/components/interior.png') 100% / cover no-repeat;
 	width: 125%;
-	aspect-ratio: 960 / 319;
+	aspect-ratio: 1920 / 543;
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
+	overflow-x: auto;
 
 	@media (--tablet) {
 		width: 1920px;

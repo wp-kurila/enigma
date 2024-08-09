@@ -30,7 +30,7 @@
 	}
 
 	@media (--mobile) {
-		aspect-ratio: 336 / 399;
+		aspect-ratio: 1;
 	}
 }
 

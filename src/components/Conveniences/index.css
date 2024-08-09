@@ -45,39 +45,38 @@
 }
 
 .image_wrapper {
-	width: 45%;
+	width: 44vw;
 	flex: 0 0 auto;
 	aspect-ratio: 659 / 376;
 	transition: transform .3s ease-in;
 	cursor: pointer;
 
 	@media (--tablet) {
-		width: 66%;
+		width: 66vw;
 		aspect-ratio: 508 / 290;
 	}
 
 	@media (--mobile) {
-		width: 80%;
+		width: 80vw;
 		aspect-ratio: 300 / 340;
 	}
 }
 
 .not_active {
-	transform: scale(0.8);
+	transform: scale(0.9);
 }
 
 .text_content {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
+	gap: 12px 24px;
 
 	@media (--tablet) {
-		justify-content: center;
 		gap: 12px;
 	}
 
-	@media (--tablet) {
-		justify-content: center;
+	@media (--mobile) {
 		gap: 8px;
 	}
 }

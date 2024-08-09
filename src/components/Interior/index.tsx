@@ -1,5 +1,6 @@
 import React, {useLayoutEffect, useRef} 	from 'react';
 import {useDrag} 			from '../../utils/useDrag';
+import {useDragNew} 		from '../../utils/useDragNew'
 import {useTranslation} 	from 'react-i18next';
 
 import styles 				from './index.css';
@@ -12,10 +13,10 @@ const Interior: React.FC = (): React.ReactElement => {
 	const {t} = useTranslation();
 
 	useLayoutEffect(() => {
-		innerRef.current.style.left = `-${(innerRef.current.offsetWidth - wrapperRef.current.offsetWidth) / 2}px`
+		// innerRef.current.style.left = `-${(innerRef.current.offsetWidth - wrapperRef.current.offsetWidth) / 2}px`
 	}, [document.documentElement.offsetWidth]);
 
-	useDrag(wrapperRef, innerRef);
+	useDragNew(innerRef, wrapperRef);
 
 	return (
 		<div className={styles.interior}>
