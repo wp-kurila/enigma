@@ -29,9 +29,7 @@ export default function (options: IConfigOptions) {
 							require('postcss-custom-media'),
 							require('postcss-preset-env')({
 								stage: 0,
-								importFrom: [
-									path.join(__dirname, '../../src/consts.css'),
-								],
+								importFrom: [path.join(__dirname, '../../src/consts.css')],
 								features: {
 									'nesting-rules': true,
 									'custom-media-queries': true,
@@ -61,8 +59,8 @@ export default function (options: IConfigOptions) {
 			use: {
 				loader: 'ts-loader',
 				options: {
-					transpileOnly: true
-				}
+					transpileOnly: true,
+				},
 			},
 		},
 	];
