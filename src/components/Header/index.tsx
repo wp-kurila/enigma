@@ -1,12 +1,12 @@
-import React, {MutableRefObject, useState} 	from 'react';
-import Nav 				from '../../ui-kit/Nav';
-import Button 			from '../../ui-kit/Button';
-import {useIsMobile} 	from '../../utils/useIsMobile';
-import MobileMenu 		from './MobileMenu';
+import React, { MutableRefObject, useState } from 'react';
+import Nav from '../../ui-kit/Nav';
+import Button from '../../ui-kit/Button';
+import { useIsMobile } from '../../utils/useIsMobile';
+import MobileMenu from './MobileMenu';
 
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-import styles 			from './index.css';
+import styles from './header.module.css';
 
 interface Props {
 	about: MutableRefObject<HTMLDivElement>;
@@ -16,21 +16,20 @@ interface Props {
 }
 
 const Header: React.FC<Props> = (props): React.ReactElement => {
-
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 	const isMobile = useIsMobile();
 	const [isActiveMobileMenu, setIsActiveMobileMenu] = useState<boolean>(false);
 
 	const toTop = () => {
 		window.scrollTo({
 			top: 0,
-			behavior: 'smooth'
+			behavior: 'smooth',
 		});
-	}
+	};
 
 	const handleActiveMenu = () => {
 		setIsActiveMobileMenu(!isActiveMobileMenu);
-	}
+	};
 
 	return (
 		<header className={styles.header}>
@@ -40,7 +39,7 @@ const Header: React.FC<Props> = (props): React.ReactElement => {
 			{isMobile && <button className={styles.mobile_menu__btn} onClick={handleActiveMenu}></button>}
 			{isMobile && isActiveMobileMenu && <MobileMenu {...props} handleActiveMenu={handleActiveMenu} isActive />}
 		</header>
-	)
-}
+	);
+};
 
 export default Header;

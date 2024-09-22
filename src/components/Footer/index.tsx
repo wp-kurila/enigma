@@ -1,9 +1,9 @@
-import React, {MutableRefObject} 	from 'react';
-import Nav 							from '../../ui-kit/Nav';
-import Social 						from '../../ui-kit/Social';
-import Copyright 					from '../../ui-kit/Copyright';
+import React, { MutableRefObject } from 'react';
+import Nav from '../../ui-kit/Nav';
+import Social from '../../ui-kit/Social';
+import Copyright from '../../ui-kit/Copyright';
 
-import styles 						from './index.css';
+import styles from './footer.module.css';
 
 interface Props {
 	about: MutableRefObject<HTMLDivElement>;
@@ -13,14 +13,13 @@ interface Props {
 }
 
 const Footer: React.FC<Props> = (props: Props): React.ReactElement => {
-
 	return (
 		<footer className={styles.footer}>
 			<Copyright />
 			<Nav {...props} />
 			<Social />
-		</footer>		
-	)
-}
+		</footer>
+	);
+};
 
 export default Footer;

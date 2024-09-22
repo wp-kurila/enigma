@@ -1,11 +1,11 @@
-import React, {MutableRefObject, useEffect, useRef} 	from 'react';
-import Nav 			from '../../ui-kit/Nav';
-import Langs 		from '../../ui-kit/Langs';
-import Social 		from '../../ui-kit/Social';
-import Copyright 	from '../../ui-kit/Copyright';
-import cn 			from 'classnames';
+import React, { MutableRefObject, useEffect, useRef } from 'react';
+import Nav from '../../ui-kit/Nav';
+import Langs from '../../ui-kit/Langs';
+import Social from '../../ui-kit/Social';
+import Copyright from '../../ui-kit/Copyright';
+import cn from 'classnames';
 
-import styles 		from './mobileMenu.css';
+import styles from './mobileMenu.module.css';
 
 interface Props {
 	about: MutableRefObject<HTMLDivElement>;
@@ -17,13 +17,12 @@ interface Props {
 }
 
 const MobileMenu: React.FC<Props> = (props: Props): React.ReactElement => {
-
 	return (
 		<>
-			<div className={styles.overlay} onClick={props.handleActiveMenu}/>
-			<div className={cn(styles.mobileMenu, {[styles.mobileMenu_active]: props.isActive})} data-tag='mobileMenu'>
-				<button className={styles.btn_close} onClick={props.handleActiveMenu}/>
-				<div className={styles.logo}/>
+			<div className={styles.overlay} onClick={props.handleActiveMenu} />
+			<div className={cn(styles.mobileMenu, { [styles.mobileMenu_active]: props.isActive })} data-tag="mobileMenu">
+				<button className={styles.btn_close} onClick={props.handleActiveMenu} />
+				<div className={styles.logo} />
 				<Nav {...props} className={styles.nav} />
 				<Langs />
 				<div className={styles.bottom_group}>
@@ -32,7 +31,7 @@ const MobileMenu: React.FC<Props> = (props: Props): React.ReactElement => {
 				</div>
 			</div>
 		</>
-	)
-}
+	);
+};
 
 export default MobileMenu;

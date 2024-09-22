@@ -1,23 +1,22 @@
-import React 			from 'react';
-import ImageWrapper 	from '../ImageWrapper';
+import React from 'react';
+import ImageWrapper from '../ImageWrapper';
 
-import styles 			from './index.css';
+import styles from './block.module.css';
 
 interface Props {
 	children: React.ReactElement | React.ReactElement[] | React.ReactNode;
-	image: string
+	image: string;
 }
 
-const Block: React.FC<Props> = ({children, image}: Props): React.ReactElement => {
-
+const Block: React.FC<Props> = ({ children, image }: Props): React.ReactElement => {
 	return (
 		<div className={styles.block}>
-			<ImageWrapper className={styles.image_wrapper}><div className={styles.image} style={{backgroundImage: `url(${image})`}}/></ImageWrapper>
-			<div className={styles.text_block}>
-				{children}
-			</div>
+			<ImageWrapper className={styles.image_wrapper}>
+				<div className={styles.image} style={{ backgroundImage: `url(${image})` }} />
+			</ImageWrapper>
+			<div className={styles.text_block}>{children}</div>
 		</div>
-	)
-}
+	);
+};
 
 export default Block;

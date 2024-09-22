@@ -11,6 +11,7 @@
 	background: #fff;
 	width: 100%;
 	left: 0;
+	top: 0;
 
 	@media (--tablet) {
 		padding: 12px 78px;
@@ -23,14 +24,14 @@
 }
 
 .logo {
-	background: url("../../../static/images/components/logo.svg");
+	background: url('../../../static/images/components/logo.svg');
 	min-width: 216px;
 	aspect-ratio: 216 / 52;
 	margin-right: auto;
 	cursor: pointer;
 
 	@media (--tablet) {
-		background: url("../../../static/images/components/logo-tablet.svg");
+		background: url('../../../static/images/components/logo-tablet.svg');
 		min-width: 38px;
 		aspect-ratio: 1;
 	}
@@ -44,7 +45,7 @@
 	padding: 14px 20px;
 	text-wrap: nowrap;
 
-	@media(hover: hover) {
+	@media (hover: hover) {
 		&:hover {
 			background: #fdd782;
 			color: #001e49;

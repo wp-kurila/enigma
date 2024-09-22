@@ -1,49 +1,68 @@
-import React, {Suspense, useEffect, useRef} 	from 'react';
-import {LazyHeader} 		from './components/Header/index.lazy';
-import {LazyBanner} 		from './components/Banner/index.lazy';
-import {LazyAbout} 			from './components/About/index.lazy';
-import {LazyInformation} 	from './components/Information/index.lazy';
-import {LazyLocation} 		from './components/Location/index.lazy';
-import {LazyConveniences} 	from './components/Conveniences/index.lazy';
-import {LazyInterior} 		from './components/Interior/index.lazy';
-import {LazyRoomsLayout} 	from './components/RoomLayouts/index.lazy';
-import {LazyQuestions} 		from './components/Questions/index.lazy';
-import {LazyInputs} 		from './components/Inputs/index.lazy';
-import {LazyContacts} 		from './components/Contacts/index.lazy';
-import {LazyFooter} 		from './components/Footer/index.lazy';
+import { FC, ReactElement, useEffect, useRef } from 'react';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import About from './components/About';
+import Information from './components/Information';
+import Layouts from './components/Layouts';
+import Location from './components/Location';
+import Conveniences from './components/Conveniences';
+import Interior from './components/Interior';
+import Questions from './components/Questions';
+import Contacts from './components/Contacts';
+import Footer from './components/Footer';
 
-import FadeInWithScroll 	from './ui-kit/FadeInWithScroll';
+import FadeInWithScroll from './ui-kit/FadeInWithScroll';
 
-import styles 				from './app.css';
+import styles from './app.module.css';
 
-const App: React.FC = (): React.ReactElement => {
-
+const App: FC = (): ReactElement => {
 	const ref = useRef<HTMLDivElement>(null);
 	const aboutRef = useRef<HTMLDivElement>(null);
-	const roomsLayoutRef = useRef<HTMLDivElement>(null);
+	const layoutsRef = useRef<HTMLDivElement>(null);
 	const questionsRef = useRef<HTMLDivElement>(null);
 	const contactsRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		window.scrollTo(0, 0); // Прокрутка к верху страницы при загрузке
+		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<div className={styles.app} ref={ref}>
-			<Suspense fallback={'Loading...'}><LazyHeader about={aboutRef} roomsLayout={roomsLayoutRef} questions={questionsRef} contacts={contactsRef} /></Suspense>
-			<Suspense fallback={'Loading...'}><LazyBanner /></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyAbout ref={aboutRef} /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyInformation /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyLocation /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyConveniences /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyInterior /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyRoomsLayout ref={roomsLayoutRef} /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyQuestions ref={questionsRef} /></FadeInWithScroll></Suspense>
+			<Header about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
+			<FadeInWithScroll>
+				<Banner />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<About ref={aboutRef} />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Information />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Location />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Conveniences />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Interior />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Layouts ref={layoutsRef} />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Questions ref={questionsRef} />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Contacts ref={contactsRef} />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
+				<Footer about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
+			</FadeInWithScroll>
+
 			{/* <Suspense fallback={'Loading...'}><FadeInWithScroll><LazyInputs /></FadeInWithScroll></Suspense> */}
-			<Suspense fallback={'Loading...'}><FadeInWithScroll><LazyContacts ref={contactsRef} /></FadeInWithScroll></Suspense>
-			<Suspense fallback={'Loading...'}><LazyFooter about={aboutRef} roomsLayout={roomsLayoutRef} questions={questionsRef} contacts={contactsRef} /></Suspense>
 		</div>
-	)
-}
+	);
+};
 
 export default App;

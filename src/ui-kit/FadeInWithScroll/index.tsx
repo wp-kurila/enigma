@@ -1,6 +1,6 @@
-import React, {useRef, useEffect} from 'react';
-import gsap 			from 'gsap';
-import {useIsMobile} 	from '../../utils/useIsMobile';
+import React, { useRef, useEffect, useLayoutEffect } from 'react';
+import gsap from 'gsap';
+import { useIsMobile } from '../../utils/useIsMobile';
 
 interface Props {
 	children: React.ReactElement;
@@ -11,17 +11,17 @@ const FadeInWithScroll: React.FC<Props> = (props: Props): React.ReactElement => 
 
 	const isMobile = useIsMobile();
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const el = ref.current;
-	
+
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				if (entry.isIntersecting) {
 					gsap.to(el, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' });
 					observer.unobserve(el);
-				  }
+				}
 			},
-			{threshold: isMobile ? 0.15 : 0.5}
+			{ threshold: isMobile ? 0.15 : 0.5 }
 		);
 
 		el && observer.observe(el);
@@ -30,10 +30,10 @@ const FadeInWithScroll: React.FC<Props> = (props: Props): React.ReactElement => 
 	}, []);
 
 	return (
-		<div ref={ref} style={{opacity: 0, transform: `translateY(${isMobile ? 80 : 40}px)`}}>
+		<div ref={ref} style={{ opacity: 0, transform: `translateY(${isMobile ? 80 : 40}px)` }}>
 			{props.children}
 		</div>
-	)
-}
+	);
+};
 
 export default FadeInWithScroll;

@@ -34,12 +34,12 @@
 		display: none;
 	}
 
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 .image {
-	background: url('../../../static/images/components/interior.png') 100% / cover no-repeat;
+	background: url('../../../static/images/components/interior.png') center / cover no-repeat;
 	width: 125%;
 	aspect-ratio: 1920 / 543;
 	position: relative;

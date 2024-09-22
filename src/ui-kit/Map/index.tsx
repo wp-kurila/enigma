@@ -1,102 +1,99 @@
-import React, {useCallback, useEffect, useRef} 	from 'react'
-import {GoogleMap, useJsApiLoader, Marker} 		from '@react-google-maps/api';
-import {useTranslation} 						from 'react-i18next';
-import {MAPS_KEY} 								from '../../../key';
-import {getImageLink} 							from '../../helpers';
-import Button 									from '../Button';
+import React, { useCallback, useEffect, useRef } from 'react';
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { useTranslation } from 'react-i18next';
+import { MAPS_KEY } from '../../../key';
+import { getImageLink } from '../../helpers';
+import Button from '../Button';
 
-import styles from './index.css';
+import styles from './map.module.css';
 
 const center = {
 	lat: 7.812960873536211,
-	lng: 98.33940945240678
+	lng: 98.33940945240678,
 };
 
 const stylesMap = [
 	{
-		"featureType": "landscape",
-		"elementType": "all",
-		"stylers": [
+		featureType: 'landscape',
+		elementType: 'all',
+		stylers: [
 			{
-				"visibility": "on"
-			}
-		]
+				visibility: 'on',
+			},
+		],
 	},
 	{
-		"featureType": "poi.business",
-		"elementType": "all",
-		"stylers": [
+		featureType: 'poi.business',
+		elementType: 'all',
+		stylers: [
 			{
-				"visibility": "simplified"
-			}
-		]
+				visibility: 'simplified',
+			},
+		],
 	},
 	{
-		"featureType": "poi.business",
-		"elementType": "labels",
-		"stylers": [
+		featureType: 'poi.business',
+		elementType: 'labels',
+		stylers: [
 			{
-				"visibility": "simplified"
-			}
-		]
+				visibility: 'simplified',
+			},
+		],
 	},
 	{
-		"featureType": "poi.park",
-		"elementType": "all",
-		"stylers": [
+		featureType: 'poi.park',
+		elementType: 'all',
+		stylers: [
 			{
-				"visibility": "off"
-			}
-		]
+				visibility: 'off',
+			},
+		],
 	},
 	{
-		"featureType": "poi.school",
-		"elementType": "all",
-		"stylers": [
+		featureType: 'poi.school',
+		elementType: 'all',
+		stylers: [
 			{
-				"visibility": "on"
-			}
-		]
+				visibility: 'on',
+			},
+		],
 	},
 	{
-		"featureType": "poi.sports_complex",
-		"elementType": "all",
-		"stylers": [
+		featureType: 'poi.sports_complex',
+		elementType: 'all',
+		stylers: [
 			{
-				"visibility": "off"
-			}
-		]
+				visibility: 'off',
+			},
+		],
 	},
 	{
-		"featureType": "transit.station.bus",
-		"elementType": "all",
-		"stylers": [
+		featureType: 'transit.station.bus',
+		elementType: 'all',
+		stylers: [
 			{
-				"visibility": "on"
+				visibility: 'on',
 			},
 			{
-				"saturation": "21"
+				saturation: '21',
 			},
 			{
-				"weight": "4.05"
-			}
-		]
-	}
+				weight: '4.05',
+			},
+		],
+	},
 ];
 
 const Map: React.FC = (): React.ReactElement => {
-
 	const ref = useRef(null);
 
 	const { isLoaded } = useJsApiLoader({
 		id: 'google-map-script',
-		googleMapsApiKey: MAPS_KEY
+		googleMapsApiKey: MAPS_KEY,
 	});
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 
-	useEffect(() => {
-
-	}, [isLoaded]);
+	useEffect(() => {}, [isLoaded]);
 
 	const openLink = useCallback(() => window.open('https://maps.app.goo.gl/cwYubmZm3TvmSm9k8', '_blank'), []);
 
@@ -104,7 +101,7 @@ const Map: React.FC = (): React.ReactElement => {
 
 	return isLoaded ? (
 		<GoogleMap
-			id='googleMaps'
+			id="googleMaps"
 			mapContainerClassName={styles.map_wrapper}
 			center={center}
 			zoom={14.8}
@@ -115,10 +112,16 @@ const Map: React.FC = (): React.ReactElement => {
 			}}
 			ref={ref}
 		>
-			<Button className={styles.btn} onClick={openLink}>{t('map__btn')}</Button>
-			<><Marker position={center} /></>
+			<Button className={styles.btn} onClick={openLink}>
+				{t('map__btn')}
+			</Button>
+			<>
+				<Marker position={center} />
+			</>
 		</GoogleMap>
-	) : <></>
-}
+	) : (
+		<></>
+	);
+};
 
 export default React.memo(Map);

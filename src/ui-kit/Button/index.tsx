@@ -1,7 +1,7 @@
-import React 	from 'react';
-import cn 		from 'classnames';
+import React from 'react';
+import cn from 'classnames';
 
-import styles 	from './index.css';
+import styles from './button.module.css';
 
 interface Props {
 	children: React.ReactNode;
@@ -10,14 +10,15 @@ interface Props {
 }
 
 const Button: React.FC<Props> = (props: Props): React.ReactElement => {
-
-	const {children, className, onClick} = props;
+	const { children, className, onClick } = props;
 
 	const btnCls = cn(styles.button, className);
 
 	return (
-		<button className={btnCls} onClick={onClick}>{children}</button>
-	)
-}
+		<button className={btnCls} onClick={onClick}>
+			{children}
+		</button>
+	);
+};
 
 export default Button;
