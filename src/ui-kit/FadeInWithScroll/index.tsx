@@ -1,12 +1,12 @@
-import React, { useRef, useEffect, useLayoutEffect } from 'react';
+import { FC, ReactElement, ReactNode, useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { useIsMobile } from '../../utils/useIsMobile';
 
 interface Props {
-	children: React.ReactElement;
+	children: ReactNode;
 }
 
-const FadeInWithScroll: React.FC<Props> = (props: Props): React.ReactElement => {
+const FadeInWithScroll: FC<Props> = (props: Props): ReactElement => {
 	const ref = useRef<HTMLDivElement>(null);
 
 	const isMobile = useIsMobile();

@@ -1,13 +1,12 @@
-import React, {useRef, useEffect} 	from 'react';
-import ReactDOM 					from 'react-dom';
+import { FC, ReactElement, ReactNode, memo } from 'react';
+import ReactDOM from 'react-dom';
 
 interface Props {
-	children: React.ReactElement | React.ReactElement[];
+	children: ReactNode;
 }
 
-const Portal: React.FC<Props> = (props: Props): React.ReactElement => {
-
+const Portal: FC<Props> = (props: Props): ReactElement => {
 	return ReactDOM.createPortal(props.children, document.body);
-}
+};
 
-export default React.memo(Portal);
+export default memo(Portal);

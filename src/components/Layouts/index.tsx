@@ -7,7 +7,7 @@ import cn from 'classnames';
 import styles from './layouts.module.css';
 import Popup from '../../ui-kit/Popup';
 
-const Rooms = ({}, ref: Ref<HTMLDivElement>): ReactElement => {
+const Rooms = (_, ref: Ref<HTMLDivElement>): ReactElement => {
 	const { t } = useTranslation();
 	const [activeLayout, setActiveLayout] = useState(0);
 	const [splideInited, setSplideInited] = useState(false);
@@ -61,13 +61,21 @@ const Rooms = ({}, ref: Ref<HTMLDivElement>): ReactElement => {
 
 	return (
 		<div className={styles.rooms} ref={ref}>
-			{showPopup && <Popup closeHandler={() => setShowPopup(false)} {...ROOM_LAYOUTS[selectedLayout]} />}
+			{showPopup && (
+				<Popup closeHandler={() => setShowPopup(false)} {...ROOM_LAYOUTS[selectedLayout]} />
+			)}
 			<div className={styles.content_wrapper}>
 				<div className={styles.title}>{t('room__layouts__title')}</div>
 				<div className={styles.layout_titles}>
 					{ROOM_LAYOUT_NAMES.map((item, i) => {
 						return (
-							<button key={`layout_title_${i}`} className={cn(styles.layouts_title, { [styles.layouts_title_active]: i === activeLayout })} onClick={() => moveToElem(i)}>
+							<button
+								key={`layout_title_${i}`}
+								className={cn(styles.layouts_title, {
+									[styles.layouts_title_active]: i === activeLayout,
+								})}
+								onClick={() => moveToElem(i)}
+							>
 								{item}
 							</button>
 						);
@@ -78,7 +86,12 @@ const Rooms = ({}, ref: Ref<HTMLDivElement>): ReactElement => {
 				<SplideTrack>
 					{ROOM_LAYOUTS.map(({ title, total, layoutId }, i) => (
 						<SplideSlide key={`room_layout_${i}`}>
-							<button className={cn(styles.slide, { [styles.slide_active]: layoutId === activeLayout })} onClick={() => handleModal(i)}>
+							<button
+								className={cn(styles.slide, {
+									[styles.slide_active]: layoutId === activeLayout,
+								})}
+								onClick={() => handleModal(i)}
+							>
 								<div className={styles.slide__title}>{total} м²</div>
 								<div className={styles.slide__description}>{title}</div>
 							</button>

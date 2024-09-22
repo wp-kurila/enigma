@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import { useTranslation } from 'react-i18next';
 import { MAPS_KEY } from '../../../key';
-import { getImageLink } from '../../helpers';
+// import { getImageLink } from '../../helpers';
 import Button from '../Button';
 
 import styles from './map.module.css';
@@ -97,7 +97,7 @@ const Map: React.FC = (): React.ReactElement => {
 
 	const openLink = useCallback(() => window.open('https://maps.app.goo.gl/cwYubmZm3TvmSm9k8', '_blank'), []);
 
-	const link = getImageLink('marker', '.svg', 'ui-kit');
+	// const link = getImageLink('marker', '.svg', 'ui-kit');
 
 	return isLoaded ? (
 		<GoogleMap

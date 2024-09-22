@@ -4,7 +4,7 @@ import Accordion from '../../ui-kit/Accordion';
 
 import styles from './questions.module.css';
 
-const Questions = ({}, ref: Ref<HTMLDivElement>): React.ReactElement => {
+const Questions = (_, ref: Ref<HTMLDivElement>): React.ReactElement => {
 	const accordionsList = useRef(null);
 	const [active, setActive] = useState(null);
 	const { t } = useTranslation();
@@ -25,7 +25,16 @@ const Questions = ({}, ref: Ref<HTMLDivElement>): React.ReactElement => {
 			<div className={styles.title}>{t('faq__title')}</div>
 			<div className={styles.accordions_wrapper} onClick={handleActive} ref={accordionsList}>
 				{content.map(({ title, text }, i) => {
-					return <Accordion title={title} text={text} key={`accordion_${i}`} tag="accordion" active={i === active} removeActive={() => setActive(-1)} />;
+					return (
+						<Accordion
+							title={title}
+							text={text}
+							key={`accordion_${i}`}
+							tag="accordion"
+							active={i === active}
+							removeActive={() => setActive(-1)}
+						/>
+					);
 				})}
 			</div>
 		</div>

@@ -7,7 +7,7 @@
 		"start": "webpack serve",
 		"build:dev": "webpack --env mode=development",
 		"build:prod": "webpack --env mode=production",
-		"eslint": "npx eslint src/** -c .eslintrc.js --ext .js,.ts,.tsx",
+		"eslint": "eslint .",
 		"ts": "tsc"
 	},
 	"keywords": [],
@@ -29,6 +29,7 @@
 		"postcss-import": "^16.1.0",
 		"postcss-loader": "^8.1.1",
 		"postcss-preset-env": "^9.6.0",
+		"prettier": "^3.3.3",
 		"style-loader": "^3.3.4",
 		"ts-loader": "^9.5.1",
 		"ts-node": "^10.9.2",

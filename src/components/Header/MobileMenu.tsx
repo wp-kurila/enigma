@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useEffect, useRef } from 'react';
+import { FC, ReactElement, MutableRefObject } from 'react';
 import Nav from '../../ui-kit/Nav';
 import Langs from '../../ui-kit/Langs';
 import Social from '../../ui-kit/Social';
@@ -16,7 +16,7 @@ interface Props {
 	isActive?: boolean;
 }
 
-const MobileMenu: React.FC<Props> = (props: Props): React.ReactElement => {
+const MobileMenu: FC<Props> = (props: Props): ReactElement => {
 	return (
 		<>
 			<div className={styles.overlay} onClick={props.handleActiveMenu} />
