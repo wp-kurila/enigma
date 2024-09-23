@@ -19,7 +19,7 @@
 }
 
 .image_wrapper {
-	width: 45%;
+	width: min(49%, 844px);
 	flex: 0 0 auto;
 	aspect-ratio: 422 / 293;
 
@@ -31,13 +31,5 @@
 
 	@media (--mobile) {
 		aspect-ratio: 1;
-	}
-}
-
-.text_block {
-	max-width: 800px;
-
-	@media (--tablet) {
-		max-width: 100%;
 	}
 }

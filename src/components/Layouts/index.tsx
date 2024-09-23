@@ -17,7 +17,6 @@ const Rooms = (_, ref: Ref<HTMLDivElement>): ReactElement => {
 
 	useEffect(() => {
 		const splideInstance = splideRef.current?.splide;
-
 		if (splideInstance && !splideInited) {
 			splideInstance.on('move', (newIndex: number) => {
 				setActiveLayout(ROOM_LAYOUTS[newIndex].layoutId);
@@ -61,9 +60,7 @@ const Rooms = (_, ref: Ref<HTMLDivElement>): ReactElement => {
 
 	return (
 		<div className={styles.rooms} ref={ref}>
-			{showPopup && (
-				<Popup closeHandler={() => setShowPopup(false)} {...ROOM_LAYOUTS[selectedLayout]} />
-			)}
+			{showPopup && <Popup closeHandler={() => setShowPopup(false)} {...ROOM_LAYOUTS[selectedLayout]} />}
 			<div className={styles.content_wrapper}>
 				<div className={styles.title}>{t('room__layouts__title')}</div>
 				<div className={styles.layout_titles}>

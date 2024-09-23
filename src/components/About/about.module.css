@@ -1,6 +1,14 @@
 @custom-media --tablet (width <= 1152px);
 @custom-media --mobile (width <= 767px);
 
+.blockText {
+	max-width: 700px;
+
+	@media (--tablet) {
+		max-width: 100%;
+	}
+}
+
 .title {
 	font-family: var(--second-family);
 	font-weight: 400;

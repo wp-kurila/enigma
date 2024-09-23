@@ -3,23 +3,24 @@
 
 .header {
 	padding: 22px 96px;
+	margin: 0 -96px;
 	display: flex;
 	align-items: center;
-	gap: clamp(20px, 48px, 72px);
-	position: fixed;
+	gap: 48px;
+	position: sticky;
 	z-index: 10;
 	background: #fff;
-	width: 100%;
-	left: 0;
 	top: 0;
 
 	@media (--tablet) {
 		padding: 12px 78px;
+		margin: 0 -78px;
 		width: 100%;
 	}
 
 	@media (--mobile) {
 		padding: 8px 18px;
+		margin: 0 -18px;
 	}
 }
 

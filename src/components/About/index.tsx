@@ -15,7 +15,7 @@ const About = (props: Props, ref: Ref<HTMLDivElement>): React.ReactElement => {
 	return (
 		<div ref={ref}>
 			<Block image={getImageLink(`house-about${isMobile ? '-mobile' : ''}`, '.png')}>
-				<div>
+				<div className={styles.blockText}>
 					<div className={styles.title}>{t('about__title')}</div>
 					<div className={styles.text}>{t('about__text')}</div>
 				</div>

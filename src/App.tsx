@@ -1,4 +1,4 @@
-import { FC, ReactElement, useEffect, useRef } from 'react';
+import { FC, ReactElement, useLayoutEffect, useRef } from 'react';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import About from './components/About';
@@ -11,7 +11,7 @@ import Questions from './components/Questions';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 
-import FadeInWithScroll from './ui-kit/FadeInWithScroll';
+import FadeInWithScroll from './ui-kit/TransformWrapper';
 
 import styles from './app.module.css';
 
@@ -22,13 +22,15 @@ const App: FC = (): ReactElement => {
 	const questionsRef = useRef<HTMLDivElement>(null);
 	const contactsRef = useRef<HTMLDivElement>(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
 	return (
 		<div className={styles.app} ref={ref}>
-			<Header about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
+			<FadeInWithScroll>
+				<Header about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
+			</FadeInWithScroll>
 			<FadeInWithScroll>
 				<Banner />
 			</FadeInWithScroll>
@@ -41,13 +43,13 @@ const App: FC = (): ReactElement => {
 			<FadeInWithScroll>
 				<Location />
 			</FadeInWithScroll>
-			<FadeInWithScroll>
+			<FadeInWithScroll noZoom>
 				<Conveniences />
 			</FadeInWithScroll>
 			<FadeInWithScroll>
 				<Interior />
 			</FadeInWithScroll>
-			<FadeInWithScroll>
+			<FadeInWithScroll noZoom>
 				<Layouts ref={layoutsRef} />
 			</FadeInWithScroll>
 			<FadeInWithScroll>

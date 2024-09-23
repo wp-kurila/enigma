@@ -3,7 +3,12 @@
 
 .location {
 	display: flex;
-    flex-flow: column;
+	flex-flow: column;
+	max-width: 700px;
+
+	@media (--tablet) {
+		max-width: 100%;
+	}
 }
 
 .title {

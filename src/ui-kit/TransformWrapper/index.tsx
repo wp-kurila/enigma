@@ -4,6 +4,7 @@ import { useIsMobile } from '../../utils/useIsMobile';
 
 interface Props {
 	children: ReactNode;
+	noZoom?: boolean;
 }
 
 const FadeInWithScroll: FC<Props> = (props: Props): ReactElement => {
@@ -12,6 +13,12 @@ const FadeInWithScroll: FC<Props> = (props: Props): ReactElement => {
 	const isMobile = useIsMobile();
 
 	useLayoutEffect(() => {
+		const zoom = document.documentElement.offsetWidth / 1920;
+
+		if (zoom > 1 && !props.noZoom) {
+			ref.current.style.zoom = zoom.toString();
+		}
+
 		const el = ref.current;
 
 		const observer = new IntersectionObserver(

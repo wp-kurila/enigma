@@ -64,6 +64,8 @@ const Conveniences: React.FC = (): React.ReactElement => {
 		} as Options;
 	}, [document.documentElement.offsetWidth]);
 
+	console.log('render');
+
 	return (
 		<div className={styles.conveniences}>
 			<div className={styles.title}>{t('convenience__title')}</div>

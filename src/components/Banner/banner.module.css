@@ -5,16 +5,13 @@
 	background: radial-gradient(158.55% 50.53% at 49.47% 50.05%, rgb(25, 34, 62) 0%, rgb(19, 24, 47) 100%);
 	position: relative;
 	margin-bottom: 96px;
-	margin-top: 96px;
 
 	@media (--tablet) {
 		margin-bottom: 48px;
-		margin-top: 62px;
 	}
 
 	@media (--mobile) {
 		margin-bottom: 20px;
-		margin-top: 54px;
 	}
 }
 
