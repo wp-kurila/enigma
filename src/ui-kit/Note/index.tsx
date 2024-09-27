@@ -14,8 +14,9 @@ const Note: FC<Props> = ({ setShowNote, isSuccess }: Props): ReactElement => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
+		const timerId = setTimeout(() => setShowNote(false), 4000);
 		return () => {
-			setTimeout(() => setShowNote(false), 4000);
+			clearTimeout(timerId)
 		};
 	}, []);
 
