@@ -6,10 +6,13 @@ export const postData = async (
 ): Promise<boolean> => {
 	const url = 'https://enigma-residence.com/api/';
 
-	const body = {
-		...params,
-		phone: params.phone.replace(/_/, ''),
-	};
+	const body: Record<string, string> = {}
+
+	for (let param in params) {
+		if (params[param]) {
+			body[param] = param === 'phone' ? params[param].replace(/_/, '') : params[param];
+		}
+	}
 
 	try {
 		const response = await fetch(url, {
