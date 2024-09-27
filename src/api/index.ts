@@ -4,7 +4,7 @@ export const postData = async (
 	params: Record<string, string>,
 	setLoading: Dispatch<SetStateAction<boolean>>
 ): Promise<boolean> => {
-	const url = 'https://enigma-residence.com/api';
+	const url = 'https://enigma-residence.com/api/';
 
 	const body = {
 		...params,
