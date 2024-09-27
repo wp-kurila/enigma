@@ -18,7 +18,20 @@
 	"location__btn": "View on map",
 
 	"convenience__title": "Facilities",
-	"convenience__descriptions": ["Rooftop pool with sea view", "Spacious coworking space", "Sauna", "Two gyms", "Underground parking", "Shuttle bus to the beaches", "Lounge area with panoramic view", "Electric vehicle charging stations", "Underground parking under each building", "Lobby", "CCTV", "Security"],
+	"convenience__descriptions": [
+		"Rooftop pool with sea view",
+		"Spacious coworking space",
+		"Sauna",
+		"Two gyms",
+		"Underground parking",
+		"Shuttle bus to the beaches",
+		"Lounge area with panoramic view",
+		"Electric vehicle charging stations",
+		"Underground parking under each building",
+		"Lobby",
+		"CCTV",
+		"Security"
+	],
 
 	"interior__title": "Interior",
 
@@ -39,9 +52,18 @@
 
 	"faq__title": "Answers to questions",
 	"faq__content": [
-		{"title": "Online Purchase", "text": "It is possible to complete the transaction without being physically present in the country. Viewing the property and consultation are available with a manager via video or audio call, as well as through messengers."},
-		{"title": "Payment Methods", "text": "Payment methods:\n- Non-cash payment\n- Cash payment in baht\n- Interest-free installments during construction."},
-		{"title": "Forms of Ownership", "text": "The Enigma Residence complex offers the following forms of ownership:\n1. Foreign Freehold – full ownership by a foreign individual or legal entity.\n2. Leasehold – long-term lease with renewal every 30 years.\n3. Thai Freehold – full ownership for Thai individuals or legal entities."}
+		{
+			"title": "Online Purchase",
+			"text": "It is possible to complete the transaction without being physically present in the country. Viewing the property and consultation are available with a manager via video or audio call, as well as through messengers."
+		},
+		{
+			"title": "Payment Methods",
+			"text": "Payment methods:\n- Non-cash payment\n- Cash payment in baht\n- Interest-free installments during construction."
+		},
+		{
+			"title": "Forms of Ownership",
+			"text": "The Enigma Residence complex offers the following forms of ownership:\n1. Foreign Freehold – full ownership by a foreign individual or legal entity.\n2. Leasehold – long-term lease with renewal every 30 years.\n3. Thai Freehold – full ownership for Thai individuals or legal entities."
+		}
 	],
 
 	"inputs__title": "Request for Consultation",
@@ -56,13 +78,27 @@
 
 	"contacts__title": "Contacts",
 	"contacts__content": [
-		{"title": "Office Address:", "description": "5/66AB Moo 5, Wiset Road, Rawai Subdistrict, Mueang district, Phuket, 83130", "href": "https://maps.app.goo.gl/EdbVqeH2to7bXVqw6"},
-		{"title": "Phone:", "description": "+66 62 905 2181", "href": "tel:+66629052181"},
-		{"title": "E-mail:", "description": "info@enigma-residence.com", "href": "mailto:info@enigma-residence.com"},
-		{"title": "Business Hours:", "description": "from 10:00 AM to 6:00 PM local time"}
+		{
+			"title": "Office Address:",
+			"description": "5/66AB Moo 5, Wiset Road, Rawai Subdistrict, Mueang district, Phuket, 83130",
+			"href": "https://maps.app.goo.gl/EdbVqeH2to7bXVqw6"
+		},
+		{ "title": "Phone:", "description": "+66 62 905 1767", "href": "tel:+66629051767" },
+		{ "title": "E-mail:", "description": "info@enigma-residence.com", "href": "mailto:info@enigma-residence.com" },
+		{ "title": "Business Hours:", "description": "from 10:00 AM to 6:00 PM local time" }
 	],
 
 	"map__btn": "Open on Google Maps",
 
-	"copyright__content": ["© 2024 Enigma Residence", "Privacy Policy", "Designed by: Krispy-Studio"]
+	"copyright__content": ["© 2024 Enigma Residence", "Privacy Policy", "Designed by: Krispy-Studio"],
+
+	"inputs__validate__name": "Name cannot be empty",
+	"inputs__validate__tel": "Phone number cannot be empty",
+	"inputs__validate__tel_short": "Invalid phone number",
+	"inputs__validate__email": "Invalid email address",
+
+	"note__title_success": "Success!",
+	"note__title_error": "Error",
+	"note__text_success": "Our manager will contact you soon.",
+	"note__text_error": "Something went wrong, please try again later."
 }

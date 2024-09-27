@@ -4,4 +4,9 @@
 	color: #fff;
 	text-transform: uppercase;
 	cursor: pointer;
+
+	&:disabled {
+		cursor: inherit;
+		opacity: 0.4;
+	}
 }

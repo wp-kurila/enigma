@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useState } from 'react';
+import React, { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
 import Nav from '../../ui-kit/Nav';
 import { useIsMobile } from '../../utils/useIsMobile';
 import MobileMenu from './MobileMenu';
@@ -15,6 +15,15 @@ interface Props {
 const Header: React.FC<Props> = (props): React.ReactElement => {
 	const isMobile = useIsMobile();
 	const [isActiveMobileMenu, setIsActiveMobileMenu] = useState<boolean>(false);
+	const ref = useRef<HTMLDivElement>();
+
+	useLayoutEffect(() => {
+		const zoom = document.documentElement.offsetWidth / 1920;
+
+		if (zoom > 1) {
+			ref.current.style.zoom = zoom.toString();
+		}
+	}, []);
 
 	const toTop = () => {
 		window.scrollTo({
@@ -28,7 +37,7 @@ const Header: React.FC<Props> = (props): React.ReactElement => {
 	};
 
 	return (
-		<header className={styles.header}>
+		<header className={styles.header} ref={ref}>
 			<button className={styles.logo} onClick={toTop}></button>
 			{!isMobile && <Nav {...props} isHeader />}
 			{/* {!isMobile && <Button className={styles.btn}>{t('btn__contact__manager')}</Button>} */}

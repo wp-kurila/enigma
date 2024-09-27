@@ -21,6 +21,7 @@
 	font-size: 20px;
 	line-height: 120%;
 	margin-bottom: 24px;
+	text-wrap: balance;
 
 	@media (--tablet) {
 		font-size: 16px;
@@ -31,7 +32,7 @@
 .inputs {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 24px;
+	gap: 36px 24px;
 	margin-bottom: 36px;
 
 	@media (--tablet) {
@@ -44,12 +45,8 @@
 	}
 }
 
-.input {
-	flex: 1 0 calc(50% - 24px / 2);
-
-	@media (--mobile) {
-		flex: 1 0 100%;
-	}
+.textarea {
+	flex: 1 1 100%;
 }
 
 .btns {

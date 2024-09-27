@@ -7,15 +7,16 @@ interface Props {
 	children: React.ReactNode;
 	className: string;
 	onClick?: () => void;
+	disabled: boolean;
 }
 
 const Button: React.FC<Props> = (props: Props): React.ReactElement => {
-	const { children, className, onClick } = props;
+	const { children, className, onClick, disabled } = props;
 
 	const btnCls = cn(styles.button, className);
 
 	return (
-		<button className={btnCls} onClick={onClick}>
+		<button className={btnCls} onClick={onClick} disabled={disabled}>
 			{children}
 		</button>
 	);

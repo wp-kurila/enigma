@@ -4,6 +4,19 @@
 .field {
 	position: relative;
 	cursor: pointer;
+	flex: 1 0 calc(50% - 24px / 2);
+
+	&:has(.input_error) {
+		animation: shaked 0.4s ease;
+	}
+
+	@media (--mobile) {
+		flex: 1 0 100%;
+	}
+}
+
+.phoneContainer {
+	height: 100%;
 }
 
 .label {
@@ -24,7 +37,6 @@
 		background: #fff;
 	}
 
-
 	@media (--tablet) {
 		font-size: 18px;
 	}
@@ -34,7 +46,11 @@
 	}
 }
 
-.input {
+.label_phone {
+	left: 50px;
+}
+
+.field .input {
 	outline: 0;
 	border: 0;
 	height: 77px;
@@ -44,8 +60,9 @@
 	font-weight: 300;
 	font-size: 24px;
 	line-height: 120%;
+	border-radius: 0;
 
-	&.input_active {
+	&:focus-visible {
 		border: 1px solid #000;
 	}
 
@@ -57,4 +74,62 @@
 	@media (--mobile) {
 		padding-left: 8px;
 	}
+}
+
+.field .input_phone {
+	padding-left: 50px;
+}
+
+.input_focus {
+	border: 1px solid #000;
+}
+
+.label_error {
+	color: #ea4353;
+}
+
+.label_hide {
+	opacity: 0;
+}
+
+.field .input_error {
+	border-bottom: 1px solid #ea4353;
+
+	&:focus-visible {
+		border: 1px solid #ea4353;
+	}
+}
+
+.shake {
+	animation: shaked 0.4s ease;
+}
+
+@keyframes shaked {
+	25%,
+	75% {
+		transform: translateX(4px);
+	}
+
+	50% {
+		transform: translateX(-4px);
+	}
+}
+
+.errorText {
+	position: absolute;
+	display: grid;
+	color: #ea4353;
+	transition: grid-template-rows 0.6s ease;
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+
+	& > div {
+		min-height: 0;
+		line-height: 32px;
+	}
+}
+
+.errorText_active {
+	grid-template-rows: 1fr;
 }

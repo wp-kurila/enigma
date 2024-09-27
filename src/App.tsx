@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import FadeInWithScroll from './ui-kit/TransformWrapper';
 
 import styles from './app.module.css';
+import Inputs from './components/Inputs';
 
 const App: FC = (): ReactElement => {
 	const ref = useRef<HTMLDivElement>(null);
@@ -28,9 +29,7 @@ const App: FC = (): ReactElement => {
 
 	return (
 		<div className={styles.app} ref={ref}>
-			<FadeInWithScroll>
-				<Header about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
-			</FadeInWithScroll>
+			<Header about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
 			<FadeInWithScroll>
 				<Banner />
 			</FadeInWithScroll>
@@ -56,13 +55,14 @@ const App: FC = (): ReactElement => {
 				<Questions ref={questionsRef} />
 			</FadeInWithScroll>
 			<FadeInWithScroll>
+				<Inputs />
+			</FadeInWithScroll>
+			<FadeInWithScroll>
 				<Contacts ref={contactsRef} />
 			</FadeInWithScroll>
 			<FadeInWithScroll>
 				<Footer about={aboutRef} roomsLayout={layoutsRef} questions={questionsRef} contacts={contactsRef} />
 			</FadeInWithScroll>
-
-			{/* <Suspense fallback={'Loading...'}><FadeInWithScroll><LazyInputs /></FadeInWithScroll></Suspense> */}
 		</div>
 	);
 };
